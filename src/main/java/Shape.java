@@ -1,4 +1,11 @@
 public abstract class Shape{
-    //public abstract double getArea();
-    public abstract String getShapeName();
+    private String shapeName;
+    public Shape(String shapeName){
+        this.shapeName = shapeName;
+    }
+    public String getShapeName() {
+        return shapeName;
+    }
+    public abstract double getArea();
+    //public abstract String getShapeName();
 }

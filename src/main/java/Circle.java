@@ -1,6 +1,14 @@
 public class Circle extends Shape{
+    private float radius;
+    public Circle(float radius){
+        super("Circle");
+        this.radius = radius;
+    }
+    public float getRadius() {
+        return radius;
+    }
     @Override
-    public String getShapeName(){
-        return "Circle";
+    public double getArea(){
+        return Math.PI * Math.sqrt(radius);
     }
 }

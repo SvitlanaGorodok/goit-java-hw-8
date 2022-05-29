@@ -1,6 +1,13 @@
 public class Quad extends Shape{
-    @Override
-    public String getShapeName(){
-        return "Quad";
+    public Quad(){
+        super("Quad");
     }
+    @Override
+    public double getArea(){
+        return 0f;
+    }
+//    @Override
+//    public String getShapeName(){
+//        return "Quad";
+//    }
 }

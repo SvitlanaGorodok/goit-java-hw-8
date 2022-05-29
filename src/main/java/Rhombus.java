@@ -1,6 +1,13 @@
 public class Rhombus extends Shape{
-    @Override
-    public String getShapeName(){
-        return "Rhombus";
+    public Rhombus(){
+        super("Rhombus");
     }
+    @Override
+    public double getArea(){
+        return 0f;
+    }
+//    @Override
+//    public String getShapeName(){
+//        return "Rhombus";
+//    }
 }

@@ -1,6 +1,13 @@
 public class Parallelogram extends Shape{
-    @Override
-    public String getShapeName(){
-        return "Parallelogram";
+    public Parallelogram(){
+        super("Parallelogram");
     }
+    @Override
+    public double getArea(){
+        return 0f;
+    }
+//    @Override
+//    public String getShapeName(){
+//        return "Parallelogram";
+//    }
 }
