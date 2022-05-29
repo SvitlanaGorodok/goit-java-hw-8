@@ -11,4 +11,11 @@ public class Circle extends Shape{
     public double getArea(){
         return Math.PI * Math.pow(radius, 2);
     }
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Circle circle = (Circle) o;
+        return radius == circle.radius;
+    }
 }

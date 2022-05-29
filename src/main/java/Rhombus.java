@@ -16,4 +16,11 @@ public class Rhombus extends Shape{
     public double getArea(){
         return (diagonal1 * diagonal2) / 2;
     }
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rhombus rhombus = (Rhombus) o;
+        return diagonal1 == rhombus.diagonal1 && diagonal2 == rhombus.diagonal2;
+    }
 }

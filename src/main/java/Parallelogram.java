@@ -16,5 +16,11 @@ public class Parallelogram extends Shape{
     public double getArea(){
         return height * base;
     }
-
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Parallelogram parallelogram = (Parallelogram) o;
+        return height == parallelogram.height && base == parallelogram.base;
+    }
 }

@@ -11,5 +11,11 @@ public class Quad extends Shape{
     public double getArea(){
         return Math.pow(side, 2);
     }
-
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Quad quad = (Quad) o;
+        return side == quad.side;
+    }
 }
