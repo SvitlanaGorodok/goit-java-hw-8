@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Quad extends Shape{
     private float side;
     public Quad(float side){
@@ -17,5 +19,9 @@ public class Quad extends Shape{
         if (o == null || getClass() != o.getClass()) return false;
         Quad quad = (Quad) o;
         return side == quad.side;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(side);
     }
 }

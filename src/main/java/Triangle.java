@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Triangle extends Shape{
     private float height;
     private float base;
@@ -22,5 +24,9 @@ public class Triangle extends Shape{
         if (o == null || getClass() != o.getClass()) return false;
         Triangle triangle = (Triangle) o;
         return height == triangle.height && base == triangle.base;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(height, base);
     }
 }

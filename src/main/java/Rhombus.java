@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Rhombus extends Shape{
     private float diagonal1;
     private float diagonal2;
@@ -22,5 +24,9 @@ public class Rhombus extends Shape{
         if (o == null || getClass() != o.getClass()) return false;
         Rhombus rhombus = (Rhombus) o;
         return diagonal1 == rhombus.diagonal1 && diagonal2 == rhombus.diagonal2;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(diagonal1, diagonal2);
     }
 }

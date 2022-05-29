@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Rectangle extends Shape{
     private float height;
     private float wight;
@@ -22,5 +24,9 @@ public class Rectangle extends Shape{
         if (o == null || getClass() != o.getClass()) return false;
         Rectangle rectangle = (Rectangle) o;
         return height == rectangle.height && wight == rectangle.wight;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(height, wight);
     }
 }

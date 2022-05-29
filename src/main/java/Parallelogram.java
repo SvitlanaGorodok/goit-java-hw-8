@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Parallelogram extends Shape{
     private float height;
     private float base;
@@ -22,5 +24,9 @@ public class Parallelogram extends Shape{
         if (o == null || getClass() != o.getClass()) return false;
         Parallelogram parallelogram = (Parallelogram) o;
         return height == parallelogram.height && base == parallelogram.base;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(height, base);
     }
 }

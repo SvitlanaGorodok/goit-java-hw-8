@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Circle extends Shape{
     private float radius;
     public Circle(float radius){
@@ -17,5 +19,9 @@ public class Circle extends Shape{
         if (o == null || getClass() != o.getClass()) return false;
         Circle circle = (Circle) o;
         return radius == circle.radius;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(radius);
     }
 }
