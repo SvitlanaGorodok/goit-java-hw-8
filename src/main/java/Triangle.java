@@ -1,13 +1,19 @@
 public class Triangle extends Shape{
-    public Triangle(){
+    private float height;
+    private float base;
+    public Triangle(float height, float base){
         super("Triangle");
+        this.height = height;
+        this.base = base;
+    }
+    public float getHigh() {
+        return height;
+    }
+    public float getBase() {
+        return base;
     }
     @Override
     public double getArea(){
-        return 0f;
+        return height * base / 2;
     }
-//    @Override
-//    public String getShapeName(){
-//        return "Triangle";
-//    }
 }

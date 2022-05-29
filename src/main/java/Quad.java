@@ -1,13 +1,15 @@
 public class Quad extends Shape{
-    public Quad(){
+    private float side;
+    public Quad(float side){
         super("Quad");
+        this.side = side;
+    }
+    public float getSide() {
+        return side;
     }
     @Override
     public double getArea(){
-        return 0f;
+        return Math.pow(side, 2);
     }
-//    @Override
-//    public String getShapeName(){
-//        return "Quad";
-//    }
+
 }
